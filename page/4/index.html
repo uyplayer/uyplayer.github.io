@@ -6,7 +6,7 @@
   
     
       
-        <meta name="robots" content="index,follow">
+        <meta name="robots" content="noindex,follow">
       
     
   
@@ -22,11 +22,7 @@
   
   <title>uyplayer&#39;s blog</title>
   
-    <meta name="keywords" content="ML,MachineLearning,DeepLearning,Python,Linux,Js,Web,Ubuntu">
-  
 
-  
-    <meta name="description" content="uyplayer blog">
   
 
   <!-- feed -->
@@ -399,14 +395,14 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("full" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("full" == "half") { // 半屏
+    if ("none" == "half") { // 半屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("full" == "full") { // 全屏
+    } else if ("none" == "full") { // 全屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
       document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
@@ -423,73 +419,6 @@
   
   <section class="post-list">
     
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
     
       
         
@@ -501,31 +430,29 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/10/inffstc/">
-        Induction Networks for Few-Shot Text Classification
+      <a href="/2020/04/15/observeaisentimentanalysis/">
+        GATED MECHANISM FOR ATTENTION BASED MULTIMODAL SENTIMENT ANALYSIS
       </a>
     </h2>
   
   <div class='md'>
     
-      <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><img src="https://s1.ax1x.com/2020/05/10/Y1LnVP.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/10/Y1LnVP.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Y1LnVP.png" border="0" />
-当文本分类趋于困难因为我们数组不足或需要让它适应新鲜的数据；最近研究中通过meta learning 模拟few shot task；在里面queries与样本级别小型支持集（the samplewise level）进行对比;但是sample-wise comparison可能会严重干扰这种基于样本的比较；因此，我们应该能够学习支持集（the samplewise level）中每个类的一般表示，并且然后将其与新queries进行比较；在本论文中我们提出了一个新Induction Network学习这种广义的类表示；通过在meta learning创新地利用动态路由算法。 通过这种方式我们让模型能够归纳并更好地提高效果；我们在经过充分研究的情感分类数据集（English）和真实世界的对话意图分类数据集（Chinese）上评估了建议的模型。实验结果表明，在两个数据集上，
-拟议的模型明显优于现有的最新方法，证明了逐级概括在few-shot text classification中的有效性。
+      <img src="https://s1.ax1x.com/2020/04/15/J9xQkq.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/04/15/J9xQkq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="J9xQkq.png" border="0" />
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-10</time>
+        <time>2020-04-15</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="sep"></span><a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
+          <a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/10/inffstc/'>
+          <a class='readmore' href='/2020/04/15/observeaisentimentanalysis/'>
             阅读全文
           </a>
         </div>
@@ -547,68 +474,15 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/04/Reinforcementlearning/">
-        Reinforcement Learning
+      <a href="/2020/04/14/GRU/">
+        Gated recurrent unit — GRU
       </a>
     </h2>
   
   <div class='md'>
     
-      <p>强化学习是一类算法，是让计算机实现从一开始完全随机的进行操作，通过不断地尝试，从错误中学习，最后找到规律，学会了达到目的的方法。这就是一个完整的强化学习过程。让计算机在不断的尝试中更新自己的行为，从而一步步学习如何操自己的行为得到高分。</p>
-<p>它主要包含四个元素，Agent、环境状态、行动、奖励，强化学习的目标就是获得最多的累计奖励。</p>
-<p>让我们想象一下比赛现成：</p>
-<p>计算机有一位虚拟的裁判，这个裁判他不会告诉你如何行动，如何做决定，他为你做的事只有给你的行为打分，最开始，计算机完全不知道该怎么做，行为完全是随机的，那计算机应该以什么形式学习这些现有的资源，或者说怎么样只从分数中学习到我应该怎样做决定呢？很简单，只需要记住那些高分，低分对应的行为，下次用同样的行为拿高分, 并避免低分的行为.</p>
-<p>计算机就是 Agent，他试图通过采取行动来操纵环境，并且从一个状态转变到另一个状态，当他完成任务时给高分(奖励)，但是当他没完成任务时，给低分(无奖励)。这也是强化学习的核心思想。所以强化学习具有分数导向性。</p>
-<p>我们换一个角度来思考.这种分数导向性好比我们在监督学习中的正确标签。</p>
-<img src="https://s1.ax1x.com/2020/05/04/YCmr60.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/04/YCmr60.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="YCmr60.png" border="0" />
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-05-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="sep"></span><a class="category-link" href="/categories/Reinforcement-Learning/">Reinforcement Learning</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/05/04/Reinforcementlearning/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/05/04/HMM/">
-        隐马尔可夫(HMM)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>HMM (Hidden Markov Model)是关于时序的概率模型,描述由一个隐藏的马尔科夫链生成不可观测的状态随机序列,再由各个状态生成观测随机序列的过程</p>
-<img src="https://s1.ax1x.com/2020/05/04/YCyNHf.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/04/YCyNHf.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="YCyNHf.png" border="0" />
-
-<blockquote>
-<p>这里“隐”指的是马尔科夫链中任意时刻的状态变量是不可见的，也就是说状态序列S0,S1,…,St无法直接观测到。但是HMM中每时刻有一个可见的观测值Ot与之对应，而且Ot有且仅于当前时刻隐状态St有关;</p>
+      <blockquote>
+<p>门控循环单元（GRU）是RNN体系结构的一种变体，它使用门控机制来控制和管理神经网络中Cell之间的信息流。</p>
 </blockquote>
     
   </div>
@@ -616,7 +490,7 @@
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-04</time>
+        <time>2020-04-14</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a>
@@ -624,7 +498,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/04/HMM/'>
+          <a class='readmore' href='/2020/04/14/GRU/'>
             阅读全文
           </a>
         </div>
@@ -646,31 +520,32 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/04/Markovchain/">
-        马尔可夫链(Markov chain)
+      <a href="/2020/04/13/IKTN/">
+        An Iterative Knowledge Transfer Network with Routing for Aspect-based Sentiment Analysis
       </a>
     </h2>
   
   <div class='md'>
     
-      <p>马尔科夫链就是某一时刻状态转移的概率只依赖于它的前一个状态;举个例子，每天的天气是一个状态的话，那个今天是不是晴天只依赖于昨天的天气，而和前天的天气没有任何关系；其实马尔科夫链比较广泛的应用到很多问题上；比如时间序列问题；</p>
-<p>$$<br>x_{t−2​},x_{t−1}​,x_t​,x_{t+1}​,x_{t+2​}<br>由马尔科夫链定义可知;x_{t+1}时刻的状态只与x_t时刻的状态有关<br>$$</p>
-<p>$$<br>P(x_{t+1}|…,x_{t-2},x_{t-1},x_t) = P(x_{t+1}|x_t)<br>$$</p>
+      <h2 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h2><blockquote>
+<p>Aspect-based sentiment analysis (ABSA)的三个subtasks： aspect term extraction, opinion term extraction and aspect-level sentiment classification 这三个子任务之间的语义相互关系不是在以前的方法中得到了很好的利用。为了克服这份问题在本论文提示一个方法Iterative Knowledge Transfer Network (IKTN)。<br>IKTN的主要思路：<br>充分地利用三个subtasks之间的语义相关性，IKTN传输特定于任务的来自三个子任务中的任何两个的知识通过使用一种经过特殊设计的路由算法（即任意两个）这三个子任务中的第三个将有所帮助。此外IKTN区分转移文档级语言知识，即领域特定的和情感相关的知识，使方面的子任务受益相应的。</p>
+</blockquote>
+<img src="https://s1.ax1x.com/2020/04/13/Gvqqx0.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/04/13/Gvqqx0.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Gvqqx0.png" border="0" />
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-04</time>
+        <time>2020-04-13</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+          <a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/04/Markovchain/'>
+          <a class='readmore' href='/2020/04/13/IKTN/'>
             阅读全文
           </a>
         </div>
@@ -692,29 +567,74 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/02/papermetaclassfier/">
-        Learning to Learn and Predict A Meta-Learning Approach for Multi-Label Classification
+      <a href="/2020/04/12/rnn/">
+        RNN
       </a>
     </h2>
   
   <div class='md'>
     
-      <img src="https://s1.ax1x.com/2020/05/02/JxEeeI.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/02/JxEeeI.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="JxEeeI.png" border="0" />
+      <p>RNN背后的思想是利用顺序信息。在传统的神经网络中，我们假设所有的输入（和输出）都是相互独立的。但对于很多任务来说，这是一个非常糟糕的想法。如果你想预测一个句子中的下一个词，你最好知道哪些词出现在它之前。RNN被称为递归，因为它们对序列中的每一个元素都执行相同的任务，输出依赖于之前的计算。关于RNN的另一种思考方式是，它们有一个 “记忆”，可以捕捉到迄今为止已经计算过的信息。理论上，RNN可以利用任意长的序列信息，但实际上，它们只限于回看几个步骤（后面会有更多的介绍）。下面是一个典型的RNN的样子。</p>
+<img src="https://s1.ax1x.com/2020/04/12/GLp3y6.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/04/12/GLp3y6.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="GLp3y6.png" border="0" />
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-02</time>
+        <time>2020-04-12</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Meta-Learning/">Meta Learning</a><span class="sep"></span><a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
+          <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/02/papermetaclassfier/'>
+          <a class='readmore' href='/2020/04/12/rnn/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/04/07/MAN/">
+        Toward Tag-free Aspect Based Sentiment Analysis:A Multiple Attention Network Approach
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <img src="https://s1.ax1x.com/2020/04/07/GcRcod.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/04/07/GcRcod.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="GcRcod.png" border="0" />
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-04-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/04/07/MAN/'>
             阅读全文
           </a>
         </div>
@@ -734,11 +654,17 @@
       <br>
       <div class="prev-next">
         
+          <a class="prev" rel="prev" href="/page/3/">
+            <section class="post prev white-box shadow" >
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+            </section>
+          </a>
+        
         <p class="current">
-          1 / 5
+          4 / 5
         </p>
         
-          <a class="next" rel="next" href="/page/2/">
+          <a class="next" rel="next" href="/page/5/">
             <section class="post next white-box shadow">
               &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
             </section>

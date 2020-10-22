@@ -6,7 +6,7 @@
   
     
       
-        <meta name="robots" content="index,follow">
+        <meta name="robots" content="noindex,follow">
       
     
   
@@ -22,11 +22,7 @@
   
   <title>uyplayer&#39;s blog</title>
   
-    <meta name="keywords" content="ML,MachineLearning,DeepLearning,Python,Linux,Js,Web,Ubuntu">
-  
 
-  
-    <meta name="description" content="uyplayer blog">
   
 
   <!-- feed -->
@@ -399,14 +395,14 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("full" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("full" == "half") { // 半屏
+    if ("none" == "half") { // 半屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("full" == "full") { // 全屏
+    } else if ("none" == "full") { // 全屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
       document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
@@ -423,73 +419,6 @@
   
   <section class="post-list">
     
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
     
       
         
@@ -501,122 +430,21 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/10/inffstc/">
-        Induction Networks for Few-Shot Text Classification
+      <a href="/2020/04/02/overfittingunderfitting/">
+        简单的谈一下过拟合、欠拟合问题
       </a>
     </h2>
   
   <div class='md'>
     
-      <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><img src="https://s1.ax1x.com/2020/05/10/Y1LnVP.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/10/Y1LnVP.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Y1LnVP.png" border="0" />
-当文本分类趋于困难因为我们数组不足或需要让它适应新鲜的数据；最近研究中通过meta learning 模拟few shot task；在里面queries与样本级别小型支持集（the samplewise level）进行对比;但是sample-wise comparison可能会严重干扰这种基于样本的比较；因此，我们应该能够学习支持集（the samplewise level）中每个类的一般表示，并且然后将其与新queries进行比较；在本论文中我们提出了一个新Induction Network学习这种广义的类表示；通过在meta learning创新地利用动态路由算法。 通过这种方式我们让模型能够归纳并更好地提高效果；我们在经过充分研究的情感分类数据集（English）和真实世界的对话意图分类数据集（Chinese）上评估了建议的模型。实验结果表明，在两个数据集上，
-拟议的模型明显优于现有的最新方法，证明了逐级概括在few-shot text classification中的有效性。
+      <p>过度拟合仅意味着学习模型过于依赖训练数据，而欠拟合意味着该模型与训练数据的关系较差。 理想情况下，这两者都不应该存在于模型中，但是通常很难消除它们。简单的说过度拟合是过度训练模型的结果，拟合不足是模型过于简单的结果，两者都导致高泛化误差。<br><img src="https://s1.ax1x.com/2020/04/02/GYQghV.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/04/02/GYQghV.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="GYQghV.png" border="0" /></p>
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="sep"></span><a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/05/10/inffstc/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/05/04/Reinforcementlearning/">
-        Reinforcement Learning
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>强化学习是一类算法，是让计算机实现从一开始完全随机的进行操作，通过不断地尝试，从错误中学习，最后找到规律，学会了达到目的的方法。这就是一个完整的强化学习过程。让计算机在不断的尝试中更新自己的行为，从而一步步学习如何操自己的行为得到高分。</p>
-<p>它主要包含四个元素，Agent、环境状态、行动、奖励，强化学习的目标就是获得最多的累计奖励。</p>
-<p>让我们想象一下比赛现成：</p>
-<p>计算机有一位虚拟的裁判，这个裁判他不会告诉你如何行动，如何做决定，他为你做的事只有给你的行为打分，最开始，计算机完全不知道该怎么做，行为完全是随机的，那计算机应该以什么形式学习这些现有的资源，或者说怎么样只从分数中学习到我应该怎样做决定呢？很简单，只需要记住那些高分，低分对应的行为，下次用同样的行为拿高分, 并避免低分的行为.</p>
-<p>计算机就是 Agent，他试图通过采取行动来操纵环境，并且从一个状态转变到另一个状态，当他完成任务时给高分(奖励)，但是当他没完成任务时，给低分(无奖励)。这也是强化学习的核心思想。所以强化学习具有分数导向性。</p>
-<p>我们换一个角度来思考.这种分数导向性好比我们在监督学习中的正确标签。</p>
-<img src="https://s1.ax1x.com/2020/05/04/YCmr60.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/04/YCmr60.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="YCmr60.png" border="0" />
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-05-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="sep"></span><a class="category-link" href="/categories/Reinforcement-Learning/">Reinforcement Learning</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/05/04/Reinforcementlearning/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/05/04/HMM/">
-        隐马尔可夫(HMM)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>HMM (Hidden Markov Model)是关于时序的概率模型,描述由一个隐藏的马尔科夫链生成不可观测的状态随机序列,再由各个状态生成观测随机序列的过程</p>
-<img src="https://s1.ax1x.com/2020/05/04/YCyNHf.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/04/YCyNHf.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="YCyNHf.png" border="0" />
-
-<blockquote>
-<p>这里“隐”指的是马尔科夫链中任意时刻的状态变量是不可见的，也就是说状态序列S0,S1,…,St无法直接观测到。但是HMM中每时刻有一个可见的观测值Ot与之对应，而且Ot有且仅于当前时刻隐状态St有关;</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-05-04</time>
+        <time>2020-04-02</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a>
@@ -624,7 +452,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/04/HMM/'>
+          <a class='readmore' href='/2020/04/02/overfittingunderfitting/'>
             阅读全文
           </a>
         </div>
@@ -646,23 +474,21 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/04/Markovchain/">
-        马尔可夫链(Markov chain)
+      <a href="/2020/03/28/Liner%20Regression/">
+        Liner Regression
       </a>
     </h2>
   
   <div class='md'>
     
-      <p>马尔科夫链就是某一时刻状态转移的概率只依赖于它的前一个状态;举个例子，每天的天气是一个状态的话，那个今天是不是晴天只依赖于昨天的天气，而和前天的天气没有任何关系；其实马尔科夫链比较广泛的应用到很多问题上；比如时间序列问题；</p>
-<p>$$<br>x_{t−2​},x_{t−1}​,x_t​,x_{t+1}​,x_{t+2​}<br>由马尔科夫链定义可知;x_{t+1}时刻的状态只与x_t时刻的状态有关<br>$$</p>
-<p>$$<br>P(x_{t+1}|…,x_{t-2},x_{t-1},x_t) = P(x_{t+1}|x_t)<br>$$</p>
+      <p>我们生活在海量数据，功能强大的计算机和人工智能的时代。 这仅仅是个开始。 数据科学和机器学习正在推动图像识别，自动驾驶汽车的发展，金融和能源领域的决策，医学的进步，社交网络的兴起等等。 线性回归是其中的重要部分。<br>线性回归是基本的统计和机器学习技术之一。 无论你要进行统计，机器学习还是科学计算，都有很大的机会需要它。 建议先学习它，然后再尝试更复杂的方法。<br><img src="https://s1.ax1x.com/2020/03/28/Gka75R.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2020/03/28/Gka75R.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" width = 80% height = 50% /></p>
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-04</time>
+        <time>2020-03-28</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a>
@@ -670,7 +496,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/04/Markovchain/'>
+          <a class='readmore' href='/2020/03/28/Liner%20Regression/'>
             阅读全文
           </a>
         </div>
@@ -692,29 +518,135 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/05/02/papermetaclassfier/">
-        Learning to Learn and Predict A Meta-Learning Approach for Multi-Label Classification
+      <a href="/2020/03/24/Pythonprocessthread/">
+        Python process and thread
       </a>
     </h2>
   
   <div class='md'>
     
-      <img src="https://s1.ax1x.com/2020/05/02/JxEeeI.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/05/02/JxEeeI.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="JxEeeI.png" border="0" />
+      <p>Unix and Linux operating systems provide the fork () system call to create a process. The fork () function is called by the parent process, and the child process is created. The child process is a copy of the parent process, but the child process has its own PID. . The fork () function is very special. It returns twice. The parent process can get the PID of the child process through the return value of the fork () function. The return value in the child process is always 0. Python’s os module provides a fork () function. Because there is no fork () call in Windows system, to achieve cross-platform multi-process programming, you can use the Process class of the multiprocessing module to create sub-processes, and this module also provides higher-level encapsulation, such as the process pool for batch starting processes Pool), Queues and Pipes used for inter-process communication.</p>
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-05-02</time>
+        <time>2020-03-24</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Meta-Learning/">Meta Learning</a><span class="sep"></span><a class="category-link" href="/categories/Paper/">Paper</a><span class="sep"></span><a class="category-link" href="/categories/Sentiment-Analysis/">Sentiment Analysis</a>
+          <a class="category-link" href="/categories/Python/">Python</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/05/02/papermetaclassfier/'>
+          <a class='readmore' href='/2020/03/24/Pythonprocessthread/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/03/24/PythonFile/">
+        Python File,Thread,requests
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="Read-and-write-binary-files"><a href="#Read-and-write-binary-files" class="headerlink" title="Read and write binary files"></a>Read and write binary files</h2><p>here we are going to Read and write binary files</p>
+<pre><code class="python">def main():
+    try:
+        #rb
+        with open(&#39;cat.jpg&#39;, &#39;rb&#39;) as fs1:
+            data = fs1.read()
+            print(type(data))  # &lt;class &#39;bytes&#39;&gt;
+        # wb
+        with open(&#39;dog.jpg&#39;, &#39;wb&#39;) as fs2:
+            fs2.write(data)
+    except FileNotFoundError as e:
+        print(&#39;can not find.&#39;)
+    except IOError as e:
+        print(&#39;got wrong&#39;)
+    print(&#39;ens.&#39;)
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-03-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/03/24/PythonFile/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/03/18/pythonclass/">
+        Python object oriented programming
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><img src="https://www.techbeamers.com/wp-content/uploads/2018/05/Python-Inheritance-OOP-Concepts.png" class="lazyload" data-srcset="https://www.techbeamers.com/wp-content/uploads/2018/05/Python-Inheritance-OOP-Concepts.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="python object oriented programming"></p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-03-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/03/18/pythonclass/'>
             阅读全文
           </a>
         </div>
@@ -734,15 +666,15 @@
       <br>
       <div class="prev-next">
         
-        <p class="current">
-          1 / 5
-        </p>
-        
-          <a class="next" rel="next" href="/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+          <a class="prev" rel="prev" href="/page/4/">
+            <section class="post prev white-box shadow" >
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
             </section>
           </a>
+        
+        <p class="current">
+          5 / 5
+        </p>
         
       </div>
     
